@@ -100,5 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => el.classList.add('revealed'));
     }
 
+    // 7. Prevent accidental dragging on cards and buttons
+    document.querySelectorAll('.service-card, .stat-card, .accordion-item, .info-card, .btn, .social-pill').forEach(el => {
+        el.addEventListener('dragstart', (e) => e.preventDefault());
+    });
+
 });
 

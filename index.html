@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
 
@@ -84,8 +84,8 @@
             <h1 class="hero-title reveal">GYM SPORIUM</h1>
             <p class="hero-subtitle reveal">Vücudunu değiştir, hayatın değişsin.</p>
             <div class="hero-buttons reveal">
-                <a href="#services" class="btn btn-outline">Salonu Keşfet</a>
-                <a href="#contact" class="btn btn-gradient">Yol Tarifi Al</a>
+                <a href="#services" class="btn btn-gradient btn-hero-primary"><i class="fa-solid fa-bolt"></i> Salonu Keşfet</a>
+                <a href="#contact" class="btn btn-outline btn-hero-secondary"><i class="fa-solid fa-location-dot"></i> Yol Tarifi Al</a>
             </div>
         </div>
 
@@ -139,12 +139,30 @@
                 </div>
             </div>
             <div class="about-text reveal">
+                <div class="about-badge"><i class="fa-solid fa-award"></i> Birebir Koçluk & Tecrübe</div>
                 <h2 class="section-title">Sizi Kim Çalıştıracak?</h2>
-                <p>Gym Sporium olarak sıradan bir spor salonu değil, hedeflerinize ulaşmanız için yanınızda olan bir aileyiz.</p>
-                <div class="highlight-box">
-                    <p><strong>Yeni başlayan tüm üyelerimize,</strong> hedeflerine uygun antrenman programlarını bizzat elden hazırlıyor ve hareket formlarını tek tek öğretiyorum.</p>
+                <p class="about-lead">Gym Sporium, zincir spor salonlarının kalabalığı ve ilgisizliği yerine; her üyenin ismiyle karşılandığı, hedefine saygı duyulduğu samimi ve disiplinli bir spor mabedidir.</p>
+                
+                <div class="trainer-quote">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p>Yeni başlayan tüm üyelerimize antrenman programını bizzat hazırlıyor, doğru formları birebir öğretiyorum. <strong>Burada asla yalnız çalışmazsınız.</strong></p>
                 </div>
-                <p>Disiplin, doğru yönlendirme ve sarsılmaz bir motivasyonla hayalinizdeki fiziğe kavuşmak için ihtiyacınız olan tüm destek burada.</p>
+
+                <!-- Güven ve Tecrübe Rozetleri -->
+                <div class="about-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Yıl Tecrübe</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2000+</div>
+                        <div class="stat-label">Değişen Hayat</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">%100</div>
+                        <div class="stat-label">Birebir İlgi</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -219,11 +237,22 @@
 
                 <div class="info-card contact-details reveal">
                     <h3>Bize Ulaşın</h3>
-                    <p>Sorularınız ve üyelik bilgisi için bizimle iletişime geçebilirsiniz.</p>
-                    <div class="contact-buttons">
-                        <a href="https://wa.me/905000000000?text=Merhaba,%20Gym%20Sporium%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp'tan Yazın</a>
-                        <a href="https://instagram.com/gymsporium" class="btn btn-instagram" target="_blank"><i class="fa-brands fa-instagram"></i> @gymsporium</a>
-                        <a href="https://facebook.com/gymsporium" class="btn btn-facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i> Gym Sporium</a>
+                    <p>Sorularınız, üyelik detayları ve salon ziyareti için bize doğrudan ulaşabilirsiniz.</p>
+                    <div class="contact-actions">
+                        <a href="https://wa.me/905000000000?text=Merhaba,%20Gym%20Sporium%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp-primary" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp ile Bilgi Alın
+                        </a>
+                        <div class="contact-social-row">
+                            <span class="social-row-title">Sosyal Medyada Biz:</span>
+                            <div class="social-pills">
+                                <a href="https://instagram.com/gymsporium" class="social-pill pill-instagram" target="_blank" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i> <span>@gymsporium</span>
+                                </a>
+                                <a href="https://facebook.com/gymsporium" class="social-pill pill-facebook" target="_blank" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i> <span>Gym Sporium</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -249,6 +278,6 @@
     </a>
 
     <!-- JS -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=7"></script>
 </body>
 </html>
