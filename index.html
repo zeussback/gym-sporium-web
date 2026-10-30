@@ -2,51 +2,55 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Gym Sporium | Vücudunu Değiştir, Hayatın Değişsin</title>
     <meta name="description" content="Gym Sporium İzmir Bayraklı'da! Vücudunu değiştir, hayatın değişsin. Birebir ilgi ve sana özel antrenman programlarıyla hedeflerine ulaş.">
     
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css?v=7">
+    <link rel="stylesheet" href="css/style.css?v=13">
+    <script>document.documentElement.classList.add('js-enabled');</script>
 </head>
 <body>
+    <script>try{if(localStorage.getItem('theme')==='light')document.body.classList.add('light-mode');}catch(e){}</script>
+    <a href="#mainContent" class="skip-link">Ana İçeriğe Atla</a>
 
     <!-- Header / Navbar -->
     <header id="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
+            <a href="#hero" class="logo">
                 <!-- Kullanıcı logoyu eklediğinde src="assets/logo.png" olarak değiştirecek -->
-                <div class="logo-circle"></div>
+                <div class="logo-circle" aria-hidden="true"></div>
                 <span>GYM SPORIUM</span>
             </a>
 
-            <!-- Mobil Menü İkonu -->
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <!-- Mobil Menü Butonu -->
+            <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menüyü Aç" aria-expanded="false" aria-controls="navLinks">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
 
-            <nav class="nav-links" id="navLinks">
+            <nav class="nav-links" id="navLinks" aria-label="Ana Navigasyon">
                 <div class="nav-menu-links">
                     <a href="#hero">Ana Sayfa</a>
                     <a href="#services">Salonumuz</a>
                     <a href="#about">Hakkımızda</a>
                     <a href="#gallery">Galeri</a>
-                    <a href="#contact">İletişim & Konum</a>
+                    <a href="#contact">İletişim &amp; Konum</a>
                 </div>
                 <div class="nav-socials">
-                    <a href="https://instagram.com/gymsporium" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://facebook.com/gymsporium" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/gymsporium" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://facebook.com/gymsporium" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
                 </div>
-                <a href="https://wa.me/905000000000?text=Merhaba,%20Gym%20Sporium%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-gradient nav-btn" target="_blank">Üye Ol / İletişim</a>
-                <button id="themeToggle" class="theme-toggle-btn" aria-label="Temayı Değiştir" type="button">
+                <a href="https://wa.me/905000000000?text=Merhaba,%20Gym%20Sporium%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-gradient nav-btn" target="_blank" rel="noopener noreferrer">Üye Ol / İletişim</a>
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Açık temaya geç" aria-pressed="false" type="button">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor" stroke-linecap="round" viewBox="0 0 32 32" class="theme-toggle-svg">
                         <clipPath id="skiper-btn-2">
                             <path class="theme-toggle-mask" d="M0-5h30a1 1 0 0 0 9 13v24H0Z" />
@@ -70,61 +74,135 @@
         </div>
     </header>
 
+    <main id="mainContent">
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
-        <div class="hero-bg"></div>
-        <div class="hero-pattern"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-overlay-light"></div>
-        
-        <div class="glow glow-left"></div>
-        <div class="glow glow-right"></div>
-        
-        <div class="container hero-content">
-            <h1 class="hero-title reveal">GYM SPORIUM</h1>
-            <p class="hero-subtitle reveal">Vücudunu değiştir, hayatın değişsin.</p>
-            <div class="hero-buttons reveal">
-                <a href="#services" class="btn btn-gradient btn-hero-primary"><i class="fa-solid fa-bolt"></i> Salonu Keşfet</a>
-                <a href="#contact" class="btn btn-outline btn-hero-secondary"><i class="fa-solid fa-location-dot"></i> Yol Tarifi Al</a>
-            </div>
-        </div>
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-pattern" aria-hidden="true"></div>
+        <div class="hero-slash" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-overlay-light" aria-hidden="true"></div>
 
-        <div class="scroll-down">
-            <a href="#services">
-                <i class="fa-solid fa-chevron-down"></i>
-            </a>
+        <div class="container hero-shell">
+            <div class="hero-main">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-title-brand">GYM <mark class="hero-title-accent">SPORIUM</mark></span>
+                    </h1>
+                    <p class="hero-title-statement">Vücudunu değiştir, hayatın değişsin.</p>
+                    <p class="hero-subtitle">
+                        Zincir salonların kalabalığı ve ilgisizliği yerine; her üyenin ismiyle karşılandığı, antrenman programının bizzat hocamız tarafından elden hazırlandığı samimi ve disiplinli spor mabedi.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-gradient btn-hero-primary"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Salonu Keşfet</a>
+                        <a href="#contact" class="btn btn-outline btn-hero-secondary"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Yol Tarifi Al</a>
+                    </div>
+                </div>
+
+                <div class="hero-stage">
+                    <div class="hero-stage-frame">
+                        <div class="hero-stage-placeholder">
+                            <i class="fa-solid fa-dumbbell hero-stage-icon" aria-hidden="true"></i>
+                            <span class="hero-stage-label">Salon Ana Görsel Alanı</span>
+                            <span class="hero-stage-path">(assets/images/hero-bg.jpg)</span>
+                        </div>
+                        <div class="hero-stage-plate">
+                            <p class="hero-stage-quote">“Yeni başlayan tüm üyelerimize antrenman programını bizzat hazırlıyor, doğru formları birebir öğretiyorum. <strong>Burada asla yalnız çalışmazsınız.</strong>”</p>
+                            <div class="hero-stage-metrics">
+                                <div class="hero-metric-item">
+                                    <span class="hero-metric-val" data-count-to="20" data-count-suffix="+">20+</span>
+                                    <span class="hero-metric-lbl">Yıl Tecrübe</span>
+                                </div>
+                                <div class="hero-metric-item">
+                                    <span class="hero-metric-val" data-count-to="2000" data-count-suffix="+">2000+</span>
+                                    <span class="hero-metric-lbl">Değişen Hayat</span>
+                                </div>
+                                <div class="hero-metric-item">
+                                    <span class="hero-metric-val" data-count-to="100" data-count-prefix="%">%100</span>
+                                    <span class="hero-metric-lbl">Birebir İlgi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-bar">
+                <div class="hero-bar-item">
+                    <span class="hero-bar-key"><i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i> Konum</span>
+                    <span class="hero-bar-val">İzmir, Bayraklı</span>
+                </div>
+                <div class="hero-bar-item">
+                    <span class="hero-bar-key"><i class="fa-regular fa-clock" aria-hidden="true"></i> Hafta İçi</span>
+                    <span class="hero-bar-val">10:00 – 22:30</span>
+                </div>
+                <div class="hero-bar-item">
+                    <span class="hero-bar-key"><i class="fa-solid fa-calendar-day" aria-hidden="true"></i> Hafta Sonu</span>
+                    <span class="hero-bar-val">Cmt 10:00–18:00 · Paz 12:00–16:00</span>
+                </div>
+                <a href="#services" class="hero-scroll-trigger" aria-label="Salonu Keşfet bölümüne kaydır">
+                    <span>Aşağı Kaydır</span>
+                    <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="section bg-darker">
         <div class="container">
-            <div class="section-header text-center reveal">
-                <h2 class="section-title">Salonumuzda Neler Var?</h2>
-                <p class="section-desc">Hedeflerinize ulaşmanız için ihtiyacınız olan her şey burada.</p>
+            <div class="section-header-split reveal">
+                <h2 class="section-title-bold">
+                    <span>SALONUMUZDA</span>
+                    <mark class="title-accent-block">NELER VAR?</mark>
+                </h2>
+                <p class="section-desc-bold">Hedeflerinize ulaşmanız için ihtiyacınız olan her şey burada. Kalabalık zincir salon karmaşası olmadan, doğrudan sonuca odaklanan antrenman altyapısı.</p>
             </div>
             
-            <div class="services-grid reveal-stagger">
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fa-solid fa-dumbbell"></i></div>
-                    <h3>Gelişmiş Ekipman Parkuru</h3>
-                    <p>Olimpiyat barlarından, her kas grubuna özel plaka yüklemeli izole makinelere kadar geniş ve kesintisiz antrenman alanı.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h3>Yoğun Kardiyo Alanı</h3>
-                    <p>Performansınızı artıracak profesyonel koşu bantları, dikey ve yatay bisikletler ile yağ yakımını maksimuma çıkarın.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
-                    <h3>Hijyen ve Konfor Standartları</h3>
-                    <p>Her mevsim ideal sıcaklık sunan güçlü klima sistemleri, düzenli dezenfekte edilen alanlar ve temiz soyunma odaları.</p>
-                </div>
-                <div class="service-card reveal">
-                    <div class="service-icon"><i class="fa-solid fa-clipboard-user"></i></div>
-                    <h3>Birebir Başlangıç Desteği</h3>
-                    <p>Spora yeni başlayan tüm üyelerimize, hedeflerine uygun antrenman programı bizzat hocamız tarafından elden hazırlanır.</p>
-                </div>
+            <div class="services-matrix reveal-stagger">
+                <article class="service-card service-card-wide reveal">
+                    <div class="service-card-top">
+                        <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i></div>
+                        <span class="service-tag">Serbest Ağırlık &amp; İzole Parkur</span>
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Gelişmiş Ekipman Parkuru</h3>
+                        <p>Olimpiyat barlarından, her kas grubuna özel plaka yüklemeli izole makinelere kadar geniş ve kesintisiz antrenman alanı.</p>
+                    </div>
+                </article>
+
+                <article class="service-card reveal">
+                    <div class="service-card-top">
+                        <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></div>
+                        <span class="service-tag">Kondisyon &amp; Yağ Yakımı</span>
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Yoğun Kardiyo Alanı</h3>
+                        <p>Performansınızı artıracak profesyonel koşu bantları, dikey ve yatay bisikletler ile yağ yakımını maksimuma çıkarın.</p>
+                    </div>
+                </article>
+
+                <article class="service-card reveal">
+                    <div class="service-card-top">
+                        <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i></div>
+                        <span class="service-tag">İklimlendirme &amp; Temizlik</span>
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Hijyen ve Konfor Standartları</h3>
+                        <p>Her mevsim ideal sıcaklık sunan güçlü klima sistemleri, düzenli dezenfekte edilen alanlar ve temiz soyunma odaları.</p>
+                    </div>
+                </article>
+
+                <article class="service-card service-card-wide service-card-featured reveal">
+                    <div class="service-card-top">
+                        <div class="service-icon" aria-hidden="true"><i class="fa-solid fa-clipboard-user" aria-hidden="true"></i></div>
+                        <span class="service-tag">Elden Antrenman Programı</span>
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Birebir Başlangıç Desteği</h3>
+                        <p>Spora yeni başlayan tüm üyelerimize, hedeflerine uygun antrenman programı bizzat hocamız tarafından elden hazırlanır.</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -133,33 +211,43 @@
     <section id="about" class="section">
         <div class="container about-container reveal-stagger">
             <div class="about-image-wrapper reveal">
-                <!-- Hoca fotoğrafı buraya gelecek -->
-                <div class="placeholder-image">
-                    <span>Hoca Fotoğrafı Alanı<br>(assets/images/hoca.jpg)</span>
+                <div class="about-portrait-frame">
+                    <!-- Hoca fotoğrafı buraya gelecek -->
+                    <div class="placeholder-image">
+                        <i class="fa-solid fa-user-check placeholder-icon" aria-hidden="true"></i>
+                        <span class="placeholder-title">Hoca Fotoğrafı Alanı</span>
+                        <span class="placeholder-path">(assets/images/hoca.jpg)</span>
+                    </div>
+                    <div class="about-portrait-footer">
+                        <span class="about-portrait-role"><i class="fa-solid fa-award" aria-hidden="true"></i> Birebir Koçluk &amp; Tecrübe</span>
+                        <span class="about-portrait-loc">İzmir, Bayraklı</span>
+                    </div>
                 </div>
             </div>
             <div class="about-text reveal">
-                <div class="about-badge"><i class="fa-solid fa-award"></i> Birebir Koçluk & Tecrübe</div>
-                <h2 class="section-title">Sizi Kim Çalıştıracak?</h2>
+                <h2 class="section-title-bold">
+                    <span>SİZİ KİM</span>
+                    <mark class="title-accent-block">ÇALIŞTIRACAK?</mark>
+                </h2>
                 <p class="about-lead">Gym Sporium, zincir spor salonlarının kalabalığı ve ilgisizliği yerine; her üyenin ismiyle karşılandığı, hedefine saygı duyulduğu samimi ve disiplinli bir spor mabedidir.</p>
                 
-                <div class="trainer-quote">
-                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                <blockquote class="trainer-quote">
+                    <i class="fa-solid fa-quote-left quote-icon" aria-hidden="true"></i>
                     <p>Yeni başlayan tüm üyelerimize antrenman programını bizzat hazırlıyor, doğru formları birebir öğretiyorum. <strong>Burada asla yalnız çalışmazsınız.</strong></p>
-                </div>
+                </blockquote>
 
                 <!-- Güven ve Tecrübe Rozetleri -->
                 <div class="about-stats-grid">
                     <div class="stat-card">
-                        <div class="stat-number">20+</div>
+                        <div class="stat-number" data-count-to="20" data-count-suffix="+">20+</div>
                         <div class="stat-label">Yıl Tecrübe</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">2000+</div>
+                        <div class="stat-number" data-count-to="2000" data-count-suffix="+">2000+</div>
                         <div class="stat-label">Değişen Hayat</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">%100</div>
+                        <div class="stat-number" data-count-to="100" data-count-prefix="%">%100</div>
                         <div class="stat-label">Birebir İlgi</div>
                     </div>
                 </div>
@@ -170,40 +258,63 @@
     <!-- Gallery Section -->
     <section id="gallery" class="section bg-darker">
         <div class="container">
-            <div class="section-header text-center reveal">
-                <h2 class="section-title">Salonun İmkanları</h2>
-                <p class="section-desc">Modern ekipmanlarımız ve motive edici atmosferimiz.</p>
+            <div class="section-header-split reveal">
+                <h2 class="section-title-bold">
+                    <span>SALONUN</span>
+                    <mark class="title-accent-block">İMKANLARI</mark>
+                </h2>
+                <p class="section-desc-bold">Modern ekipmanlarımız, ferah çalışma istasyonlarımız ve motive edici atmosferimiz.</p>
             </div>
             
             <div class="gallery-accordion reveal">
-                <div class="accordion-item">
+                <div class="accordion-item" tabindex="0" aria-expanded="true">
                     <div class="accordion-bg placeholder-bg"></div>
+                    <div class="accordion-placeholder-meta">
+                        <span>Görsel Alanı · Serbest Ağırlık</span>
+                    </div>
                     <div class="accordion-content">
                         <h3>Serbest Ağırlık Alanı</h3>
+                        <p>Olimpiyat barları, dumbbell setleri ve güç istasyonları.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" tabindex="0" aria-expanded="false">
                     <div class="accordion-bg placeholder-bg"></div>
+                    <div class="accordion-placeholder-meta">
+                        <span>Görsel Alanı · Kardiyo</span>
+                    </div>
                     <div class="accordion-content">
                         <h3>Kardiyo Alanı</h3>
+                        <p>Koşu bantları, dikey ve yatay kondisyon bisikletleri.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" tabindex="0" aria-expanded="false">
                     <div class="accordion-bg placeholder-bg"></div>
+                    <div class="accordion-placeholder-meta">
+                        <span>Görsel Alanı · Genel Görünüm</span>
+                    </div>
                     <div class="accordion-content">
                         <h3>Salon Genel Görünüm</h3>
+                        <p>Ferah, iklimlendirilmiş ve kesintisiz antrenman atmosferi.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" tabindex="0" aria-expanded="false">
                     <div class="accordion-bg placeholder-bg"></div>
+                    <div class="accordion-placeholder-meta">
+                        <span>Görsel Alanı · Soyunma Odaları</span>
+                    </div>
                     <div class="accordion-content">
                         <h3>Soyunma Odaları</h3>
+                        <p>Düzenli dezenfekte edilen temiz ve konforlu alanlar.</p>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item" tabindex="0" aria-expanded="false">
                     <div class="accordion-bg placeholder-bg"></div>
+                    <div class="accordion-placeholder-meta">
+                        <span>Görsel Alanı · Karşılama</span>
+                    </div>
                     <div class="accordion-content">
                         <h3>Karşılama Alanı</h3>
+                        <p>Her üyenin ismiyle karşılandığı samimi giriş alanı.</p>
                     </div>
                 </div>
             </div>
@@ -212,72 +323,111 @@
 
     <!-- Contact & Info Section -->
     <section id="contact" class="section">
-        <div class="container contact-container reveal-stagger">
-            
-            <div class="contact-info">
-                <h2 class="section-title reveal">İletişim & Konum</h2>
-                
-                <div class="info-card reveal">
-                    <h3>Çalışma Saatleri</h3>
-                    <table class="hours-table">
-                        <tr>
-                            <td>Hafta İçi</td>
-                            <td>10:00 - 22:30</td>
-                        </tr>
-                        <tr>
-                            <td>Cumartesi</td>
-                            <td>10:00 - 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Pazar</td>
-                            <td>12:00 - 16:00</td>
-                        </tr>
-                    </table>
-                </div>
+        <div class="container">
+            <div class="section-header-split reveal">
+                <h2 class="section-title-bold">
+                    <span>İLETİŞİM &amp;</span>
+                    <mark class="title-accent-block">KONUM</mark>
+                </h2>
+                <p class="section-desc-bold">Sorularınız, üyelik detayları ve salon ziyareti için bize doğrudan ulaşabilir veya harita üzerinden yol tarifi alabilirsiniz.</p>
+            </div>
 
-                <div class="info-card contact-details reveal">
-                    <h3>Bize Ulaşın</h3>
-                    <p>Sorularınız, üyelik detayları ve salon ziyareti için bize doğrudan ulaşabilirsiniz.</p>
-                    <div class="contact-actions">
-                        <a href="https://wa.me/905000000000?text=Merhaba,%20Gym%20Sporium%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp-primary" target="_blank">
-                            <i class="fa-brands fa-whatsapp"></i> WhatsApp ile Bilgi Alın
-                        </a>
-                        <div class="contact-social-row">
-                            <span class="social-row-title">Sosyal Medyada Biz:</span>
-                            <div class="social-pills">
-                                <a href="https://instagram.com/gymsporium" class="social-pill pill-instagram" target="_blank" aria-label="Instagram">
-                                    <i class="fa-brands fa-instagram"></i> <span>@gymsporium</span>
-                                </a>
-                                <a href="https://facebook.com/gymsporium" class="social-pill pill-facebook" target="_blank" aria-label="Facebook">
-                                    <i class="fa-brands fa-facebook-f"></i> <span>Gym Sporium</span>
-                                </a>
+            <div class="contact-container reveal-stagger">
+                <div class="contact-info">
+                    <div class="info-card reveal">
+                        <div class="info-card-header">
+                            <h3>Çalışma Saatleri</h3>
+                            <span class="info-card-tag"><i class="fa-regular fa-clock" aria-hidden="true"></i> Haftalık Plan</span>
+                        </div>
+                        <table class="hours-table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Hafta İçi</th>
+                                    <td>10:00 – 22:30</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Cumartesi</th>
+                                    <td>10:00 – 18:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Pazar</th>
+                                    <td>12:00 – 16:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="info-card contact-details reveal">
+                        <div class="info-card-header">
+                            <h3>Bize Ulaşın</h3>
+                            <span class="info-card-tag"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Hızlı İletişim</span>
+                        </div>
+                        <p>Üyelik bilgisi almak veya tanışma antrenmanı planlamak için WhatsApp hattımızdan doğrudan yazabilirsiniz.</p>
+                        <div class="contact-actions">
+                            <a href="https://wa.me/905000000000?text=Merhaba,%20Gym%20Sporium%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-whatsapp-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp ile Bilgi Alın
+                            </a>
+                            <div class="contact-social-row">
+                                <span class="social-row-title">Sosyal Medyada Biz:</span>
+                                <div class="social-pills">
+                                    <a href="https://instagram.com/gymsporium" class="social-pill pill-instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram (@gymsporium)">
+                                        <i class="fa-brands fa-instagram" aria-hidden="true"></i> <span>@gymsporium</span>
+                                    </a>
+                                    <a href="https://facebook.com/gymsporium" class="social-pill pill-facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook (Gym Sporium)">
+                                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i> <span>Gym Sporium</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="map-container reveal">
-                <!-- Google Haritalar iframe (GymSporium Spor Salonu Özel Pin) -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3124.0501729126813!2d27.19593807659598!3d38.46340297181995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b97d379483cc77%3A0x609ba6dae431a992!2sGymSporium%20Spor%20Salonu!5e0!3m2!1str!2str!4v1780148204905!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-stage reveal">
+                    <div class="map-stage-bar">
+                        <span class="map-stage-title"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> GymSporium Spor Salonu · İzmir, Bayraklı</span>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=GymSporium+Spor+Salonu+Bayrakl%C4%B1+%C4%B0zmir" target="_blank" rel="noopener noreferrer" class="map-stage-link">Haritada Aç <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="map-container">
+                        <!-- Google Haritalar iframe (GymSporium Spor Salonu Özel Pin) -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3124.0501729126813!2d27.19593807659598!3d38.46340297181995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b97d379483cc77%3A0x609ba6dae431a992!2sGymSporium%20Spor%20Salonu!5e0!3m2!1str!2str!4v1780148204905!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Gym Sporium Konum Haritası"></iframe>
+                    </div>
+                </div>
             </div>
-
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container text-center reveal">
-            <p>&copy; 2026 Gym Sporium. Tüm hakları saklıdır.</p>
+        <div class="container footer-inner reveal">
+            <div class="footer-brand">
+                <a href="#hero" class="logo">
+                    <div class="logo-circle" aria-hidden="true"></div>
+                    <span>GYM SPORIUM</span>
+                </a>
+                <p class="footer-slogan">Vücudunu değiştir, hayatın değişsin.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#services">Salonumuz</a>
+                <a href="#about">Hakkımızda</a>
+                <a href="#gallery">Galeri</a>
+                <a href="#contact">İletişim &amp; Konum</a>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Gym Sporium · İzmir, Bayraklı. Tüm hakları saklıdır.</p>
+            </div>
         </div>
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/905000000000?text=Merhaba,%20Gym%20Sporium%20hakkında%20bilgi%20almak%20istiyorum." class="floating-whatsapp" target="_blank" title="WhatsApp İletişim">
-        <i class="fa-brands fa-whatsapp"></i>
+    <a href="https://wa.me/905000000000?text=Merhaba,%20Gym%20Sporium%20hakkında%20bilgi%20almak%20istiyorum." class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp İletişim" title="WhatsApp İletişim">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     </a>
 
+    <!-- GSAP & ScrollTrigger -->
+    <script src="js/vendor/gsap.min.js" defer></script>
+    <script src="js/vendor/ScrollTrigger.min.js" defer></script>
     <!-- JS -->
-    <script src="js/main.js?v=7"></script>
+    <script src="js/main.js?v=13" defer></script>
 </body>
 </html>
