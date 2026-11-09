@@ -6,8 +6,5 @@
   "scripts": {
     "dev": "npx -y serve . -l 3000",
     "start": "npx -y serve . -l 3000"
-  },
-  "dependencies": {
-    "gsap": "^3.15.0"
   }
 }

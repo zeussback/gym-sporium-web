@@ -404,30 +404,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     once: true
                 }
             });
-
-            // J. Interactive Service Card Icon Micro-Physics
-            document.querySelectorAll('.service-card').forEach(card => {
-                const icon = card.querySelector('.service-icon');
-                if (!icon) return;
-                card.addEventListener('mouseenter', () => {
-                    gsap.to(icon, {
-                        scale: 1.08,
-                        rotation: -4,
-                        duration: 0.28,
-                        ease: 'back.out(2)',
-                        overwrite: 'auto'
-                    });
-                });
-                card.addEventListener('mouseleave', () => {
-                    gsap.to(icon, {
-                        scale: 1,
-                        rotation: 0,
-                        duration: 0.25,
-                        ease: 'power2.out',
-                        overwrite: 'auto'
-                    });
-                });
-            });
         });
     } else {
         // Fallback: Native IntersectionObserver if GSAP scripts fail to load
